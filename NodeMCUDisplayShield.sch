@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="8.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -621,6 +622,70 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="con-garry" urn="urn:adsk.eagle:library:147">
+<description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
+&lt;a href="www.mpe-connector.de"&gt;Menufacturer&lt;/a&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="332-02" urn="urn:adsk.eagle:footprint:6784/1" library_version="1">
+<description>&lt;b&gt;2 Pin - 2mm Dual Row&lt;/b&gt;&lt;p&gt;
+Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
+<wire x1="-0.85" y1="-1.9" x2="0.85" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="0.85" y1="-1.9" x2="0.85" y2="-0.4" width="0.2032" layer="21"/>
+<wire x1="0.85" y1="0.4" x2="0.85" y2="1.9" width="0.2032" layer="21"/>
+<wire x1="0.85" y1="1.9" x2="-0.85" y2="1.9" width="0.2032" layer="21"/>
+<wire x1="-0.85" y1="1.9" x2="-0.85" y2="0.4" width="0.2032" layer="21"/>
+<wire x1="-0.85" y1="-0.4" x2="-0.85" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="-0.85" y1="0.4" x2="-0.85" y2="-0.4" width="0.2032" layer="21" curve="-129.185"/>
+<wire x1="0.85" y1="-0.4" x2="0.85" y2="0.4" width="0.2032" layer="21" curve="-129.185"/>
+<pad name="1" x="0" y="-1" drill="0.9" diameter="1.27"/>
+<pad name="2" x="0" y="1" drill="0.9" diameter="1.27"/>
+<text x="-0.65" y="-1.75" size="0.3048" layer="21" font="vector">1</text>
+<text x="-0.62" y="-3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.62" y="2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.25" y1="-1.25" x2="0.25" y2="-0.75" layer="51"/>
+<rectangle x1="-0.25" y1="0.75" x2="0.25" y2="1.25" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="332-02" urn="urn:adsk.eagle:package:6810/1" type="box" library_version="1">
+<description>2 Pin - 2mm Dual Row
+Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="MV" urn="urn:adsk.eagle:symbol:6783/1" library_version="1">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="332-02" urn="urn:adsk.eagle:component:6832/1" prefix="X" library_version="1">
+<description>&lt;b&gt;2 Pin - 2mm Dual Row&lt;/b&gt;&lt;p&gt;
+Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
+<gates>
+<gate name="-1" symbol="MV" x="-10.16" y="0" addlevel="always"/>
+<gate name="-2" symbol="MV" x="10.16" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="332-02">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:6810/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -637,60 +702,58 @@
 <parts>
 <part name="TFT+TOUCH" library="pinhead" deviceset="PINHD-1X14" device=""/>
 <part name="ESP8266" library="pinhead" deviceset="PINHD-1X10" device=""/>
+<part name="X1" library="con-garry" library_urn="urn:adsk.eagle:library:147" deviceset="332-02" device="" package3d_urn="urn:adsk.eagle:package:6810/1"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="22.86" y="68.58" size="1.778" layer="95">D1</text>
-<text x="22.86" y="66.04" size="1.778" layer="95">D2</text>
-<text x="22.86" y="63.5" size="1.778" layer="95">D3</text>
-<text x="22.86" y="60.96" size="1.778" layer="95">D4</text>
-<text x="20.32" y="58.42" size="1.778" layer="95">3V3</text>
-<text x="20.32" y="55.88" size="1.778" layer="95">GND</text>
-<text x="22.86" y="53.34" size="1.778" layer="95">D5</text>
-<text x="22.86" y="50.8" size="1.778" layer="95">D6</text>
-<text x="22.86" y="48.26" size="1.778" layer="95">D7</text>
-<text x="22.86" y="45.72" size="1.778" layer="95">D8</text>
 <text x="58.42" y="58.42" size="1.778" layer="95">T_CLK</text>
 <text x="58.42" y="66.04" size="1.778" layer="95">T_DO</text>
 <text x="58.42" y="63.5" size="1.778" layer="95">T_DIN</text>
-<text x="60.96" y="50.8" size="1.778" layer="95">SCK</text>
+<text x="58.42" y="50.8" size="1.778" layer="95">SCK</text>
 <text x="55.88" y="48.26" size="1.778" layer="95">SDI/MOSI</text>
 <text x="58.42" y="43.18" size="1.778" layer="95">RESET</text>
 <text x="53.34" y="55.88" size="1.778" layer="95">SODI/MISO</text>
+<text x="58.42" y="68.58" size="1.778" layer="95">T_IRQ</text>
+<text x="58.42" y="60.96" size="1.778" layer="95">T_CS</text>
+<text x="58.42" y="53.34" size="1.778" layer="95">LED</text>
+<text x="58.42" y="45.72" size="1.778" layer="95">D/C</text>
+<text x="58.42" y="40.64" size="1.778" layer="95">CS</text>
 </plain>
 <instances>
 <instance part="TFT+TOUCH" gate="A" x="73.66" y="53.34"/>
 <instance part="ESP8266" gate="A" x="33.02" y="58.42"/>
+<instance part="X1" gate="-1" x="20.32" y="38.1"/>
+<instance part="X1" gate="-2" x="20.32" y="35.56"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="T_IRQ" class="0">
-<segment>
-<pinref part="TFT+TOUCH" gate="A" pin="1"/>
-<wire x1="71.12" y1="68.58" x2="38.1" y2="68.58" width="0.1524" layer="91"/>
-<label x="38.1" y="68.58" size="1.778" layer="95"/>
-</segment>
+<net name="D8" class="0">
 <segment>
 <pinref part="ESP8266" gate="A" pin="10"/>
 <wire x1="30.48" y1="45.72" x2="10.16" y2="45.72" width="0.1524" layer="91"/>
 <label x="10.16" y="45.72" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="T_CS" class="0">
 <segment>
-<pinref part="TFT+TOUCH" gate="A" pin="4"/>
-<wire x1="71.12" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
-<label x="38.1" y="60.96" size="1.778" layer="95"/>
+<pinref part="TFT+TOUCH" gate="A" pin="12"/>
+<wire x1="71.12" y1="40.64" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
+<label x="38.1" y="40.64" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="D4" class="0">
 <segment>
 <pinref part="ESP8266" gate="A" pin="4"/>
 <wire x1="30.48" y1="60.96" x2="10.16" y2="60.96" width="0.1524" layer="91"/>
 <label x="10.16" y="60.96" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TFT+TOUCH" gate="A" pin="10"/>
+<wire x1="71.12" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
+<label x="38.1" y="45.72" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="SODI/MISO" class="0">
+<net name="D6_SODI/MISO" class="0">
 <segment>
 <pinref part="TFT+TOUCH" gate="A" pin="6"/>
 <wire x1="71.12" y1="55.88" x2="38.1" y2="55.88" width="0.1524" layer="91"/>
@@ -707,7 +770,7 @@
 <label x="38.1" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="LED" class="1">
+<net name="D3" class="1">
 <segment>
 <pinref part="TFT+TOUCH" gate="A" pin="7"/>
 <wire x1="71.12" y1="53.34" x2="38.1" y2="53.34" width="0.1524" layer="91"/>
@@ -719,7 +782,7 @@
 <label x="10.16" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SCK" class="0">
+<net name="D5_SCK" class="0">
 <segment>
 <pinref part="TFT+TOUCH" gate="A" pin="8"/>
 <wire x1="71.12" y1="50.8" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
@@ -736,7 +799,7 @@
 <label x="38.1" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SDI/MOSI" class="0">
+<net name="D7_SDI/MOSI" class="0">
 <segment>
 <pinref part="TFT+TOUCH" gate="A" pin="9"/>
 <wire x1="71.12" y1="48.26" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
@@ -755,28 +818,28 @@
 <label x="38.1" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D/C" class="0">
-<segment>
-<pinref part="TFT+TOUCH" gate="A" pin="10"/>
-<wire x1="71.12" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
-<label x="38.1" y="45.72" size="1.778" layer="95"/>
-</segment>
+<net name="D2" class="0">
 <segment>
 <pinref part="ESP8266" gate="A" pin="2"/>
 <wire x1="30.48" y1="66.04" x2="10.16" y2="66.04" width="0.1524" layer="91"/>
 <label x="10.16" y="66.04" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="CS" class="0">
 <segment>
-<pinref part="TFT+TOUCH" gate="A" pin="12"/>
-<wire x1="71.12" y1="40.64" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
-<label x="38.1" y="40.64" size="1.778" layer="95"/>
+<pinref part="TFT+TOUCH" gate="A" pin="4"/>
+<wire x1="71.12" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
+<label x="38.1" y="60.96" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="D1" class="0">
 <segment>
 <pinref part="ESP8266" gate="A" pin="1"/>
 <wire x1="30.48" y1="68.58" x2="10.16" y2="68.58" width="0.1524" layer="91"/>
 <label x="10.16" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TFT+TOUCH" gate="A" pin="1"/>
+<wire x1="71.12" y1="68.58" x2="38.1" y2="68.58" width="0.1524" layer="91"/>
+<label x="38.1" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -789,6 +852,11 @@
 <pinref part="ESP8266" gate="A" pin="6"/>
 <wire x1="30.48" y1="55.88" x2="10.16" y2="55.88" width="0.1524" layer="91"/>
 <label x="10.16" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-2" pin="S"/>
+<wire x1="17.78" y1="35.56" x2="10.16" y2="35.56" width="0.1524" layer="91"/>
+<label x="10.16" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="1">
@@ -807,10 +875,32 @@
 <wire x1="71.12" y1="43.18" x2="38.1" y2="43.18" width="0.1524" layer="91"/>
 <label x="38.1" y="43.18" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="X1" gate="-1" pin="S"/>
+<wire x1="17.78" y1="38.1" x2="10.16" y2="38.1" width="0.1524" layer="91"/>
+<label x="10.16" y="38.1" size="1.778" layer="95"/>
+</segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>

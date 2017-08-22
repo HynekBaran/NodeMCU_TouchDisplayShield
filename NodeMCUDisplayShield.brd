@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="8.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.0125" unitdist="inch" unit="inch" style="lines" multiple="4" display="yes" altdistance="0.00625" altunitdist="inch" altunit="inch"/>
+<grid distance="0.0125" unitdist="inch" unit="inch" style="lines" multiple="2" display="yes" altdistance="0.00625" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -52,7 +53,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -71,23 +72,21 @@
 </layers>
 <board>
 <plain>
-<wire x1="0.635" y1="0" x2="34.905" y2="0" width="0" layer="20"/>
-<wire x1="34.905" y1="6.655" x2="0.635" y2="6.655" width="0" layer="20"/>
-<wire x1="0.635" y1="6.655" x2="0.635" y2="0" width="0" layer="20"/>
-<text x="34.925" y="6.0325" size="0.6096" layer="25" rot="R180">D0</text>
-<circle x="34.29" y="5.715" radius="0.762" width="0.127" layer="25"/>
-<text x="34.925" y="4.445" size="0.6096" layer="26" rot="MR270">VCC</text>
-<wire x1="34.905" y1="0" x2="34.905" y2="6.655" width="0" layer="20"/>
-<text x="32.385" y="4.445" size="0.6096" layer="26" rot="MR270">GND</text>
-<text x="3.81" y="4.1275" size="0.8128" layer="26" rot="MR180">TOUCH</text>
-<rectangle x1="1.27" y1="2.54" x2="11.43" y2="3.175" layer="26"/>
-<text x="0.9525" y="2.8575" size="0.8128" layer="25">github.com/HynekBaran/NodeMCU_TouchDisplayShield</text>
-<circle x="6.35" y="5.715" radius="0.762" width="0.127" layer="25"/>
-<circle x="3.81" y="5.715" radius="0.762" width="0.127" layer="25"/>
-<circle x="1.27" y="5.715" radius="0.762" width="0.127" layer="25"/>
-<text x="6.985" y="6.0325" size="0.6096" layer="25" rot="R180">TX</text>
-<text x="4.445" y="6.0325" size="0.6096" layer="25" rot="R180">RX</text>
-<text x="2.54" y="6.0325" size="0.6096" layer="25" rot="R180">GND</text>
+<wire x1="2.54" y1="0" x2="27.94" y2="0" width="0" layer="20"/>
+<wire x1="27.94" y1="0" x2="27.94" y2="2.2225" width="0" layer="20"/>
+<wire x1="27.94" y1="2.2225" x2="34.905" y2="2.2225" width="0" layer="20"/>
+<wire x1="34.905" y1="7.3025" x2="0.635" y2="7.3025" width="0" layer="20"/>
+<wire x1="0.635" y1="7.3025" x2="0.635" y2="2.2225" width="0" layer="20"/>
+<wire x1="0.635" y1="2.2225" x2="2.54" y2="2.2225" width="0" layer="20"/>
+<wire x1="2.54" y1="2.2225" x2="2.54" y2="0" width="0" layer="20"/>
+<text x="1.905" y="3.175" size="0.6096" layer="25" rot="R180">D0</text>
+<text x="34.6075" y="4.7625" size="0.6096" layer="25" rot="R180">VCC</text>
+<wire x1="34.905" y1="2.2225" x2="34.905" y2="7.3025" width="0" layer="20"/>
+<text x="32.385" y="4.7625" size="0.6096" layer="25" rot="R180">GND</text>
+<text x="29.845" y="-5.08" size="0.8128" layer="26" rot="MR0">github.com/HynekBaran/NodeMCU_TouchDisplayShield</text>
+<text x="30.7975" y="3.175" size="0.6096" layer="25" rot="R180">TX</text>
+<text x="29.5275" y="3.175" size="0.6096" layer="25" rot="R180">RX</text>
+<text x="35.8775" y="-1.27" size="0.6096" layer="25" rot="R180">GND</text>
 </plain>
 <libraries>
 <library name="pinhead">
@@ -324,6 +323,38 @@
 </package>
 </packages>
 </library>
+<library name="con-garry" urn="urn:adsk.eagle:library:147">
+<description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
+&lt;a href="www.mpe-connector.de"&gt;Menufacturer&lt;/a&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="332-02" urn="urn:adsk.eagle:footprint:6784/1" library_version="1">
+<description>&lt;b&gt;2 Pin - 2mm Dual Row&lt;/b&gt;&lt;p&gt;
+Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
+<wire x1="-0.85" y1="-1.9" x2="0.85" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="0.85" y1="-1.9" x2="0.85" y2="-0.4" width="0.2032" layer="21"/>
+<wire x1="0.85" y1="0.4" x2="0.85" y2="1.9" width="0.2032" layer="21"/>
+<wire x1="0.85" y1="1.9" x2="-0.85" y2="1.9" width="0.2032" layer="21"/>
+<wire x1="-0.85" y1="1.9" x2="-0.85" y2="0.4" width="0.2032" layer="21"/>
+<wire x1="-0.85" y1="-0.4" x2="-0.85" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="-0.85" y1="0.4" x2="-0.85" y2="-0.4" width="0.2032" layer="21" curve="-129.185"/>
+<wire x1="0.85" y1="-0.4" x2="0.85" y2="0.4" width="0.2032" layer="21" curve="-129.185"/>
+<pad name="1" x="0" y="-1" drill="0.9" diameter="1.27"/>
+<pad name="2" x="0" y="1" drill="0.9" diameter="1.27"/>
+<text x="-0.65" y="-1.75" size="0.3048" layer="21" font="vector">1</text>
+<text x="-0.62" y="-3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.62" y="2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.25" y1="-1.25" x2="0.25" y2="-0.75" layer="51"/>
+<rectangle x1="-0.25" y1="0.75" x2="0.25" y2="1.25" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="332-02" urn="urn:adsk.eagle:package:6810/1" type="box" library_version="1">
+<description>2 Pin - 2mm Dual Row
+Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
+</package3d>
+</packages3d>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -420,7 +451,7 @@ Please make sure your boards conform to these design rules.</description>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
 <param name="AutoGrid" value="1"/>
-<param name="Efforts" value="0"/>
+<param name="Efforts" value="2"/>
 <param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="a"/>
@@ -513,141 +544,151 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="TFT+TOUCH" library="pinhead" package="1X14" value="" x="17.78" y="1.27" smashed="yes" rot="MR180">
-<attribute name="NAME" x="19.6088" y="3.8862" size="1.016" layer="26" ratio="10" rot="MR180"/>
-<attribute name="VALUE" x="0" y="4.445" size="1.27" layer="28" rot="MR180"/>
+<element name="TFT+TOUCH" library="pinhead" package="1X14" value="" x="17.78" y="6.35" smashed="yes">
+<attribute name="NAME" x="8.1788" y="4.0513" size="0.6096" layer="25" ratio="10"/>
+<attribute name="VALUE" x="0" y="3.175" size="1.27" layer="27"/>
 </element>
-<element name="ESP8266" library="pinhead" package="1X10" value="" x="20.32" y="5.715" smashed="yes" rot="R180">
-<attribute name="NAME" x="7.0612" y="4.8387" size="1.016" layer="25" ratio="10" rot="R180"/>
-<attribute name="VALUE" x="33.02" y="8.89" size="1.27" layer="27" rot="R180"/>
+<element name="ESP8266" library="pinhead" package="1X10" value="" x="15.24" y="0.9525" smashed="yes">
+<attribute name="NAME" x="8.4963" y="2.7813" size="0.6096" layer="25" ratio="10"/>
+<attribute name="VALUE" x="2.54" y="-2.2225" size="1.27" layer="27"/>
 </element>
+<element name="X1" library="con-garry" library_urn="urn:adsk.eagle:library:147" package="332-02" package3d_urn="urn:adsk.eagle:package:6810/1" value="332-02" x="33.02" y="2.8575" smashed="yes" rot="R90"/>
 </elements>
 <signals>
-<signal name="T_IRQ">
-<contactref element="TFT+TOUCH" pad="1"/>
+<signal name="D8">
 <contactref element="ESP8266" pad="10"/>
-<wire x1="1.6002" y1="1.2954" x2="1.2954" y2="1.2954" width="0.1524" layer="1"/>
-<wire x1="6.0198" y1="5.715" x2="1.6002" y2="1.2954" width="0.1524" layer="1"/>
-<wire x1="8.89" y1="5.715" x2="6.0198" y2="5.715" width="0.1524" layer="1"/>
-<wire x1="1.2954" y1="1.2954" x2="1.27" y2="1.27" width="0.1524" layer="1"/>
+<contactref element="TFT+TOUCH" pad="12"/>
+<wire x1="27.46375" y1="1.74625" x2="26.67" y2="0.9525" width="0.1524" layer="1"/>
+<wire x1="27.46375" y1="4.60375" x2="27.46375" y2="1.74625" width="0.1524" layer="1"/>
+<wire x1="29.21" y1="6.35" x2="27.46375" y2="4.60375" width="0.1524" layer="1"/>
 </signal>
-<signal name="T_CS">
-<contactref element="TFT+TOUCH" pad="4"/>
+<signal name="D4">
 <contactref element="ESP8266" pad="4"/>
-<wire x1="9.2202" y1="1.2954" x2="8.9154" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="11.2014" y1="3.2766" x2="9.2202" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="12.954" y1="3.2766" x2="11.2014" y2="3.2766" width="0.1524" layer="16"/>
-<wire x1="15.0114" y1="3.2766" x2="12.954" y2="3.2766" width="0.1524" layer="1"/>
-<wire x1="15.6972" y1="3.9624" x2="15.0114" y2="3.2766" width="0.1524" layer="1"/>
-<wire x1="18.2118" y1="3.9624" x2="15.6972" y2="3.9624" width="0.1524" layer="16"/>
-<wire x1="22.3266" y1="3.9624" x2="18.2118" y2="3.9624" width="0.1524" layer="1"/>
-<wire x1="24.0792" y1="5.715" x2="22.3266" y2="3.9624" width="0.1524" layer="1"/>
-<wire x1="8.9154" y1="1.2954" x2="8.89" y2="1.27" width="0.1524" layer="16"/>
-<wire x1="24.0792" y1="5.715" x2="24.13" y2="5.715" width="0.1524" layer="1"/>
-<via x="12.954" y="3.2766" extent="1-16" drill="0.3302"/>
-<via x="15.6972" y="3.9624" extent="1-16" drill="0.3302"/>
-<via x="18.2118" y="3.9624" extent="1-16" drill="0.3302"/>
+<contactref element="TFT+TOUCH" pad="10"/>
+<wire x1="13.335" y1="2.8575" x2="11.43" y2="0.9525" width="0.1524" layer="16"/>
+<wire x1="15.24" y1="2.8575" x2="13.335" y2="2.8575" width="0.1524" layer="16"/>
+<wire x1="16.51" y1="4.1275" x2="15.24" y2="2.8575" width="0.1524" layer="16"/>
+<wire x1="20.16125" y1="4.1275" x2="16.51" y2="4.1275" width="0.1524" layer="16"/>
+<wire x1="20.47875" y1="4.445" x2="20.16125" y2="4.1275" width="0.1524" layer="16"/>
+<wire x1="22.225" y1="4.445" x2="20.47875" y2="4.445" width="0.1524" layer="16"/>
+<wire x1="24.13" y1="6.35" x2="22.225" y2="4.445" width="0.1524" layer="16"/>
 </signal>
-<signal name="SODI/MISO">
+<signal name="D6_SODI/MISO">
 <contactref element="TFT+TOUCH" pad="6"/>
 <contactref element="ESP8266" pad="8"/>
 <contactref element="TFT+TOUCH" pad="2"/>
-<wire x1="4.191" y1="1.2954" x2="3.81" y2="1.2954" width="0.1524" layer="1"/>
-<wire x1="5.9436" y1="3.048" x2="4.191" y2="1.2954" width="0.1524" layer="1"/>
-<wire x1="12.192" y1="3.048" x2="5.9436" y2="3.048" width="0.1524" layer="1"/>
-<wire x1="13.97" y1="1.27" x2="12.2301" y2="3.0099" width="0.1524" layer="1"/>
-<wire x1="12.2301" y1="3.0099" x2="12.192" y2="3.048" width="0.1524" layer="1"/>
-<wire x1="3.81" y1="1.2954" x2="3.81" y2="1.27" width="0.1524" layer="1"/>
-<wire x1="13.9446" y1="5.1054" x2="13.9446" y2="5.715" width="0.1524" layer="1"/>
-<wire x1="12.2682" y1="3.429" x2="13.9446" y2="5.1054" width="0.1524" layer="1"/>
-<wire x1="12.2682" y1="3.048" x2="12.2682" y2="3.429" width="0.1524" layer="1"/>
-<wire x1="13.9446" y1="5.715" x2="13.97" y2="5.715" width="0.1524" layer="1"/>
-<wire x1="12.2682" y1="3.048" x2="12.2301" y2="3.0099" width="0.1524" layer="1"/>
+<wire x1="5.715" y1="4.445" x2="3.81" y2="6.35" width="0.1524" layer="16"/>
+<wire x1="12.065" y1="4.445" x2="5.715" y2="4.445" width="0.1524" layer="16"/>
+<wire x1="13.97" y1="6.35" x2="12.065" y2="4.445" width="0.1524" layer="16"/>
+<wire x1="18.0975" y1="4.445" x2="21.59" y2="0.9525" width="0.1524" layer="1"/>
+<wire x1="13.97" y1="4.445" x2="18.0975" y2="4.445" width="0.1524" layer="1"/>
+<wire x1="13.97" y1="6.35" x2="13.97" y2="4.445" width="0.1524" layer="1"/>
 </signal>
-<signal name="LED" class="1">
+<signal name="D3" class="1">
 <contactref element="TFT+TOUCH" pad="7"/>
 <contactref element="ESP8266" pad="3"/>
-<wire x1="16.6878" y1="1.2954" x2="16.5354" y2="1.2954" width="0.381" layer="1"/>
-<wire x1="18.8976" y1="3.5052" x2="16.6878" y2="1.2954" width="0.381" layer="1"/>
-<wire x1="24.4602" y1="3.5052" x2="18.8976" y2="3.5052" width="0.381" layer="1"/>
-<wire x1="26.67" y1="5.715" x2="24.4602" y2="3.5052" width="0.381" layer="1"/>
-<wire x1="16.5354" y1="1.2954" x2="16.51" y2="1.27" width="0.381" layer="1"/>
+<wire x1="10.795" y1="2.8575" x2="8.89" y2="0.9525" width="0.381" layer="1"/>
+<wire x1="10.795" y1="3.81" x2="10.795" y2="2.8575" width="0.381" layer="1"/>
+<wire x1="10.95375" y1="3.96875" x2="10.795" y2="3.81" width="0.381" layer="16"/>
+<wire x1="14.12875" y1="3.96875" x2="10.95375" y2="3.96875" width="0.381" layer="16"/>
+<wire x1="16.51" y1="6.35" x2="14.12875" y2="3.96875" width="0.381" layer="16"/>
+<via x="10.795" y="3.81" extent="1-16" drill="0.3302"/>
 </signal>
-<signal name="SCK">
+<signal name="D5_SCK">
 <contactref element="TFT+TOUCH" pad="8"/>
 <contactref element="ESP8266" pad="7"/>
 <contactref element="TFT+TOUCH" pad="5"/>
-<wire x1="11.811" y1="1.2954" x2="11.43" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="13.5636" y1="3.048" x2="11.811" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="17.2974" y1="3.048" x2="15.3924" y2="3.048" width="0.1524" layer="16"/>
-<wire x1="15.3924" y1="3.048" x2="13.5636" y2="3.048" width="0.1524" layer="16"/>
-<wire x1="19.05" y1="1.2954" x2="17.2974" y2="3.048" width="0.1524" layer="16"/>
-<wire x1="11.43" y1="1.2954" x2="11.43" y2="1.27" width="0.1524" layer="16"/>
-<wire x1="19.05" y1="1.2954" x2="19.05" y2="1.27" width="0.1524" layer="16"/>
-<wire x1="16.4592" y1="3.81" x2="16.4592" y2="5.715" width="0.1524" layer="1"/>
-<wire x1="15.3924" y1="2.7432" x2="16.4592" y2="3.81" width="0.1524" layer="1"/>
-<wire x1="15.3924" y1="3.048" x2="15.3924" y2="2.7432" width="0.1524" layer="16"/>
-<wire x1="16.4592" y1="5.715" x2="16.51" y2="5.715" width="0.1524" layer="1"/>
-<via x="15.3924" y="2.7432" extent="1-16" drill="0.3302"/>
+<wire x1="15.875" y1="4.1275" x2="19.05" y2="0.9525" width="0.1524" layer="1"/>
+<wire x1="11.43" y1="4.1275" x2="15.875" y2="4.1275" width="0.1524" layer="1"/>
+<wire x1="11.43" y1="6.35" x2="11.43" y2="4.1275" width="0.1524" layer="1"/>
+<wire x1="22.70125" y1="2.69875" x2="19.05" y2="6.35" width="0.1524" layer="1"/>
+<wire x1="22.70125" y1="2.54" x2="22.70125" y2="2.69875" width="0.1524" layer="1"/>
+<wire x1="22.38375" y1="2.8575" x2="22.70125" y2="2.54" width="0.1524" layer="16"/>
+<wire x1="20.955" y1="2.8575" x2="22.38375" y2="2.8575" width="0.1524" layer="16"/>
+<wire x1="19.05" y1="0.9525" x2="20.955" y2="2.8575" width="0.1524" layer="16"/>
+<via x="22.70125" y="2.54" extent="1-16" drill="0.3302"/>
 </signal>
-<signal name="SDI/MOSI">
+<signal name="D7_SDI/MOSI">
 <contactref element="TFT+TOUCH" pad="9"/>
 <contactref element="ESP8266" pad="9"/>
 <contactref element="TFT+TOUCH" pad="3"/>
-<wire x1="6.7056" y1="1.2954" x2="6.4008" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="11.1252" y1="5.715" x2="6.7056" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="11.43" y1="5.715" x2="11.1252" y2="5.715" width="0.1524" layer="16"/>
-<wire x1="6.4008" y1="1.2954" x2="6.35" y2="1.27" width="0.1524" layer="16"/>
-<wire x1="21.2598" y1="1.2954" x2="21.5646" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="19.2024" y1="3.3528" x2="21.2598" y2="1.2954" width="0.1524" layer="16"/>
-<wire x1="13.7922" y1="3.3528" x2="19.2024" y2="3.3528" width="0.1524" layer="16"/>
-<wire x1="11.43" y1="5.715" x2="13.7922" y2="3.3528" width="0.1524" layer="16"/>
-<wire x1="21.5646" y1="1.2954" x2="21.59" y2="1.27" width="0.1524" layer="16"/>
+<wire x1="23.33625" y1="1.74625" x2="24.13" y2="0.9525" width="0.1524" layer="1"/>
+<wire x1="23.33625" y1="4.60375" x2="23.33625" y2="1.74625" width="0.1524" layer="1"/>
+<wire x1="21.59" y1="6.35" x2="23.33625" y2="4.60375" width="0.1524" layer="1"/>
+<wire x1="8.255" y1="4.445" x2="6.35" y2="6.35" width="0.1524" layer="1"/>
+<wire x1="8.255" y1="3.81" x2="8.255" y2="4.445" width="0.1524" layer="1"/>
+<wire x1="8.89" y1="3.175" x2="8.255" y2="3.81" width="0.1524" layer="16"/>
+<wire x1="15.08125" y1="3.175" x2="8.89" y2="3.175" width="0.1524" layer="16"/>
+<wire x1="16.35125" y1="4.445" x2="15.08125" y2="3.175" width="0.1524" layer="16"/>
+<wire x1="19.3675" y1="4.445" x2="16.35125" y2="4.445" width="0.1524" layer="16"/>
+<wire x1="21.2725" y1="6.35" x2="19.3675" y2="4.445" width="0.1524" layer="16"/>
+<wire x1="21.59" y1="6.35" x2="21.2725" y2="6.35" width="0.1524" layer="16"/>
+<via x="8.255" y="3.81" extent="1-16" drill="0.3302"/>
 </signal>
-<signal name="D/C">
-<contactref element="TFT+TOUCH" pad="10"/>
+<signal name="D2">
 <contactref element="ESP8266" pad="2"/>
-<wire x1="24.4602" y1="1.2954" x2="24.1554" y2="1.2954" width="0.1524" layer="1"/>
-<wire x1="28.8798" y1="5.715" x2="24.4602" y2="1.2954" width="0.1524" layer="1"/>
-<wire x1="29.21" y1="5.715" x2="28.8798" y2="5.715" width="0.1524" layer="1"/>
-<wire x1="24.1554" y1="1.2954" x2="24.13" y2="1.27" width="0.1524" layer="1"/>
+<contactref element="TFT+TOUCH" pad="4"/>
+<wire x1="8.89" y1="3.4925" x2="6.35" y2="0.9525" width="0.1524" layer="1"/>
+<wire x1="8.89" y1="6.35" x2="8.89" y2="3.4925" width="0.1524" layer="1"/>
 </signal>
-<signal name="CS">
-<contactref element="TFT+TOUCH" pad="12"/>
+<signal name="D1">
 <contactref element="ESP8266" pad="1"/>
-<wire x1="29.2608" y1="3.2766" x2="29.2608" y2="1.2954" width="0.1524" layer="1"/>
-<wire x1="31.6992" y1="5.715" x2="29.2608" y2="3.2766" width="0.1524" layer="1"/>
-<wire x1="29.2608" y1="1.2954" x2="29.21" y2="1.27" width="0.1524" layer="1"/>
-<wire x1="31.6992" y1="5.715" x2="31.75" y2="5.715" width="0.1524" layer="1"/>
+<contactref element="TFT+TOUCH" pad="1"/>
+<wire x1="3.01625" y1="1.74625" x2="3.81" y2="0.9525" width="0.1524" layer="1"/>
+<wire x1="3.01625" y1="4.60375" x2="3.01625" y2="1.74625" width="0.1524" layer="1"/>
+<wire x1="1.27" y1="6.35" x2="3.01625" y2="4.60375" width="0.1524" layer="1"/>
 </signal>
 <signal name="GND" class="1">
 <contactref element="TFT+TOUCH" pad="13"/>
 <contactref element="ESP8266" pad="6"/>
-<wire x1="31.5468" y1="1.2954" x2="31.6992" y2="1.2954" width="0.381" layer="16"/>
-<wire x1="29.6418" y1="3.2004" x2="31.5468" y2="1.2954" width="0.381" layer="16"/>
-<wire x1="21.5646" y1="3.2004" x2="29.6418" y2="3.2004" width="0.381" layer="16"/>
-<wire x1="19.05" y1="5.715" x2="21.5646" y2="3.2004" width="0.381" layer="16"/>
-<wire x1="31.6992" y1="1.2954" x2="31.75" y2="1.27" width="0.381" layer="16"/>
+<contactref element="X1" pad="2"/>
+<wire x1="31.75" y1="3.01625" x2="31.90875" y2="2.8575" width="0.381" layer="1"/>
+<wire x1="31.75" y1="6.35" x2="31.75" y2="3.01625" width="0.381" layer="1"/>
+<wire x1="31.90875" y1="2.8575" x2="32.02" y2="2.8575" width="0.381" layer="1"/>
+<wire x1="18.57375" y1="3.01625" x2="16.51" y2="0.9525" width="0.381" layer="16"/>
+<wire x1="20.47875" y1="3.01625" x2="18.57375" y2="3.01625" width="0.381" layer="16"/>
+<wire x1="20.79625" y1="3.33375" x2="20.47875" y2="3.01625" width="0.381" layer="16"/>
+<wire x1="31.4325" y1="3.33375" x2="20.79625" y2="3.33375" width="0.381" layer="16"/>
+<wire x1="31.90875" y1="2.8575" x2="31.4325" y2="3.33375" width="0.381" layer="16"/>
+<wire x1="31.90875" y1="2.8575" x2="32.02" y2="2.8575" width="0.381" layer="16"/>
 </signal>
 <signal name="VCC" class="1">
 <contactref element="TFT+TOUCH" pad="14"/>
 <contactref element="ESP8266" pad="5"/>
 <contactref element="TFT+TOUCH" pad="11"/>
-<wire x1="26.67" y1="2.667" x2="26.67" y2="1.27" width="0.381" layer="1"/>
-<wire x1="27.8892" y1="3.8862" x2="26.67" y2="2.667" width="0.381" layer="1"/>
-<wire x1="27.2034" y1="3.8862" x2="27.8892" y2="3.8862" width="0.381" layer="16"/>
-<wire x1="27.1272" y1="3.81" x2="27.2034" y2="3.8862" width="0.381" layer="16"/>
-<wire x1="23.5458" y1="3.81" x2="27.1272" y2="3.81" width="0.381" layer="16"/>
-<wire x1="21.6408" y1="5.715" x2="23.5458" y2="3.81" width="0.381" layer="16"/>
-<wire x1="21.6408" y1="5.715" x2="21.59" y2="5.715" width="0.381" layer="16"/>
-<wire x1="34.0614" y1="1.2954" x2="34.29" y2="1.2954" width="0.381" layer="16"/>
-<wire x1="31.5468" y1="3.81" x2="34.0614" y2="1.2954" width="0.381" layer="16"/>
-<wire x1="28.0416" y1="3.81" x2="31.5468" y2="3.81" width="0.381" layer="16"/>
-<wire x1="34.29" y1="1.2954" x2="34.29" y2="1.27" width="0.381" layer="16"/>
-<wire x1="28.0416" y1="3.81" x2="27.8892" y2="3.8862" width="0.381" layer="16"/>
-<via x="27.8892" y="3.8862" extent="1-16" drill="0.3302"/>
+<contactref element="X1" pad="1"/>
+<wire x1="34.29" y1="3.01625" x2="34.13125" y2="2.8575" width="0.381" layer="1"/>
+<wire x1="34.29" y1="6.35" x2="34.29" y2="3.01625" width="0.381" layer="1"/>
+<wire x1="34.13125" y1="2.8575" x2="34.02" y2="2.8575" width="0.381" layer="1"/>
+<wire x1="16.66875" y1="3.65125" x2="13.97" y2="0.9525" width="0.381" layer="16"/>
+<wire x1="20.32" y1="3.65125" x2="16.66875" y2="3.65125" width="0.381" layer="16"/>
+<wire x1="20.6375" y1="3.96875" x2="20.32" y2="3.65125" width="0.381" layer="16"/>
+<wire x1="24.28875" y1="3.96875" x2="20.6375" y2="3.96875" width="0.381" layer="16"/>
+<wire x1="26.67" y1="6.35" x2="24.844375" y2="4.524375" width="0.381" layer="16"/>
+<wire x1="24.844375" y1="4.524375" x2="24.28875" y2="3.96875" width="0.381" layer="16"/>
+<wire x1="32.385" y1="4.445" x2="33.9725" y2="2.8575" width="0.381" layer="16"/>
+<wire x1="24.92375" y1="4.445" x2="32.385" y2="4.445" width="0.381" layer="16"/>
+<wire x1="33.9725" y1="2.8575" x2="34.02" y2="2.8575" width="0.381" layer="16"/>
+<wire x1="24.92375" y1="4.445" x2="24.844375" y2="4.524375" width="0.381" layer="16"/>
 </signal>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>
