@@ -1064,6 +1064,8 @@ Modified by Rikard Qvarnström&lt;/author&gt;</description>
 <text x="58.42" y="53.34" size="1.778" layer="95">LED</text>
 <text x="58.42" y="45.72" size="1.778" layer="95">D/C</text>
 <text x="58.42" y="40.64" size="1.778" layer="95">CS</text>
+<text x="33.02" y="30.48" size="1.016" layer="97">Inspired by http://nailbuster.com/?page_id=341</text>
+<text x="33.02" y="33.02" size="1.016" layer="97">Order PCB at https://pcbs.io/share/zd3qw</text>
 </plain>
 <instances>
 <instance part="TFT+TOUCH" gate="A" x="73.66" y="53.34"/>
